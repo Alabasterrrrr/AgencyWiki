@@ -2,6 +2,8 @@ site_name: AgencyWiki
 site_description: База знаний агентства
 docs_dir: test
 site_dir: site
+exclude_docs: |
+  _index.md
 
 theme:
   name: material
