@@ -1,6 +1,6 @@
 ---
 order: 1
-title: Visa
+title: Visas
 ---
 
 [view:hierarchy=none::::List]
