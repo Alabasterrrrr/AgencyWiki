@@ -25,7 +25,13 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install mkdocs-material
+          pip install mkdocs-material mkdocs-awesome-pages-plugin
+
+      - name: Preprocess Gramax files
+        run: |
+          find test/ -name "_index.md" | while read f; do
+            cp "$f" "$(dirname $f)/index.md"
+          done
 
       - name: Deploy to GitHub Pages
         run: |
