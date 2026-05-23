@@ -24,12 +24,10 @@ jobs:
           python-version: '3.x'
 
       - name: Install dependencies
-        run: |
-          pip install mkdocs-material mkdocs-awesome-pages-plugin pyyaml
+        run: pip install mkdocs-material mkdocs-awesome-pages-plugin pyyaml
 
-      - name: Preprocess Gramax files
+      - name: Build docs structure
         run: python preprocess.py
 
       - name: Deploy to GitHub Pages
-        run: |
-          mkdocs gh-deploy --force
+        run: mkdocs gh-deploy --force
